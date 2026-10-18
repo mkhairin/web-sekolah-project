@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/signin', [DashboardController::class, 'login'])->name('signin.index');
+Route::get('/signup', [DashboardController::class, 'signup'])->name('signup.index');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('/inventory', [DashboardController::class, 'inventory'])->name('inventory.index');

@@ -22,7 +22,7 @@
 
     @stack('scripts')
     <!-- Bootstrap JS -->
-    <script src="./assets/js/main.js" type="module"></script>
+    {{-- <script src="./assets/js/main.js" type="module"></script> --}}
 
 
 </body>

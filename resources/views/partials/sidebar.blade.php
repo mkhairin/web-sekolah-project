@@ -25,7 +25,9 @@
             </a>
         </li>
         <li>
-            <a class="nav-link" href="#"><i class="ti ti-receipt"></i><span class="nav-text">Reports</span></a>
+            <a class="nav-link {{ request()->is('/reports') ? 'active' : '' }}" href="{{ url('/reports') }}">
+                <i class="ti ti-receipt"></i><span class="nav-text">Reports</span>
+            </a>
         </li>
         <li>
             <a class="nav-link" href="#"><i class="ti ti-alert-circle"></i><span class="nav-text">404

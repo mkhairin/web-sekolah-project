@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
@@ -19,5 +19,10 @@ class DashboardController extends Controller
     public function addProduct()
     {
         return view('add-product');
+    }
+
+    public function reports()
+    {
+        return view('reports');
     }
 }

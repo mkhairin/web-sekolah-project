@@ -221,7 +221,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-2.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Wireless Earphones</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">$89 </small>
@@ -233,7 +233,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-1.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Gaming Joy Stick</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">$49 </small>
@@ -245,7 +245,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-3.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Smart Watch Pro</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">$98 </small>
@@ -257,7 +257,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-4.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">USB-C Fast Charger</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">$35 </small>
@@ -269,7 +269,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-5.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Portable Bluetooth Speaker</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">$65 </small>
@@ -294,7 +294,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-8.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Wireless Headphones</p>
             <small>ID: #554433</small>
           </div>
@@ -305,7 +305,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-4.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">USB-C Cable Pack</p>
             <small>ID: #887766</small>
           </div>
@@ -316,7 +316,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-10.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Phone Screen Protector</p>
             <small>ID: #332211</small>
           </div>
@@ -327,7 +327,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-4.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Portable Charger 20000mAh</p>
             <small>ID: #998877</small>
           </div>
@@ -338,7 +338,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-6.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Mechanical Keyboard RGB</p>
             <small>ID: #665544</small>
           </div>
@@ -364,7 +364,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-7.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">MacBook Pro 16"</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">Computers </small>
@@ -376,7 +376,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-9.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">AirPods Pro Max</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">Audio </small>
@@ -388,7 +388,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-8.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">iPad Air 11"</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">Tablets </small>
@@ -400,7 +400,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-3.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Apple Watch Ultra</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">Wearables </small>
@@ -412,7 +412,7 @@
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
           <img src="{{ asset('assets/images/product-6.png') }}" class="rounded" width="48">
-          <div class="flex-grow-1">
+          <div class="grow">
             <p class="mb-1">Magic Keyboard</p>
             <div class="d-flex align-items-center gap-2 text-muted">
               <small class="fw-semibold">Accessories </small>
@@ -426,12 +426,4 @@
     </div>
   </div>
 </div>
-@endsection
-
-{{-- @extends('layouts.app')
-
-@section('title', 'Test Dashboard')
-
-@section('content')
-    <h1>Halaman Dashboard Berhasil Dikeluarkan!</h1>
 @endsection

@@ -1,6 +1,6 @@
 <aside id="sidebar" class="sidebar">
     <div class="logo-area">
-        <a href="{{ url('/') }}" class="d-inline-flex">
+        <a href="{{ url('/dashboard') }}" class="d-inline-flex">
             <img src="{{ asset('assets/images/logo-icon.svg') }}" alt="" width="24">
             <span class="logo-text ms-2">
                 <img src="{{ asset('assets/images/logo.svg') }}" alt="">
@@ -39,7 +39,8 @@
 
         <li class="px-4 pt-4 pb-2"><small class="nav-text">Account</small></li>
         <li>
-            <a class="nav-link" href="#"><i class="ti ti-logout"></i><span class="nav-text">Log in</span></a>
+            <a class="nav-link" href="{{ url('/signin') }}"><i class="ti ti-logout"></i><span class="nav-text">Log
+                    in</span></a>
         </li>
         <li>
             <a class="nav-link" href="#"><i class="ti ti-user-plus"></i><span class="nav-text">Sign up</span></a>

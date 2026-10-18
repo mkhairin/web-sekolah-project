@@ -25,4 +25,9 @@ class DashboardController extends Controller
     {
         return view('reports');
     }
+
+    public function login()
+    {
+        return view('signin');
+    }
 }

@@ -14,10 +14,14 @@ return new class extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
             $table->string('code', 20);
+            // Nama lengkap mata pelajaran (contoh: "Matematika Wajib", "Fisika Peminatan")
             $table->string('name', 100);
+            // Kategori pelajaran. Di Indonesia (K-13 / Kurikulum Merdeka)
             $table->enum('category', [
-                'Kelompok A (Nasional)', 'Kelompok B (Kewilayahan)',
-                'Kelompok C (Peminatan)', 'Muatan Lokal'
+                'Kelompok A (Nasional)',
+                'Kelompok B (Kewilayahan)',
+                'Kelompok C (Peminatan)',
+                'Muatan Lokal'
             ]);
             $table->boolean('is_active')->default(false);
             $table->timestamps();

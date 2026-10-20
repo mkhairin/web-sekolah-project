@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('class_students', function (Blueprint $table) {
             $table->id();
-            $table->foreign('student_id')->references('id')->on('student');
-            $table->foreign('class_id')->references('id')->on('classes');
-            $table->foreign('academic_year_id')->references('id')->on('academic_years');
+            $table->foreignId('student_id')->constrained('students');
+            $table->foreignId('class_id')->constrained('classes');
+            $table->foreignId('academic_year_id')->constrained('academic_years');
             $table->enum('status', ['aktif', 'pindah_kelas', 'tinggal_kelas', 'lulus']);
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->integer('grade_level');
-            $table->foreign('teacher_id')->references('id')->on('teachers');
+            $table->foreignId('teacher_id')->constrained('teachers');
             $table->timestamps();
         });
     }

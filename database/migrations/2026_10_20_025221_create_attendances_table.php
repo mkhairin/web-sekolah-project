@@ -22,7 +22,8 @@ return new class extends Migration
                 'sakit',
                 'alpa'
             ]);
-            $table->text('notes');
+            $table->text('notes')->nullable();
+            $table->unique(['schedule_id', 'student_id', 'date']);
             $table->timestamps();
         });
     }

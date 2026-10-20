@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Classes extends Model
 {
@@ -17,8 +17,8 @@ class Classes extends Model
         'teacher_id'
     ];
 
-    public function teachers(): HasMany
+    public function teachers(): BelongsTo
     {
-        return $this->hasMany(Classes::class);
+        return $this->belongsTo(Classes::class);
     }
 }

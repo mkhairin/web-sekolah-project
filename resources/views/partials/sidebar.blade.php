@@ -1,4 +1,4 @@
-<aside id="sidebar" class="sidebar">
+{{-- <aside id="sidebar" class="sidebar">
     <div class="logo-area">
         <a href="{{ url('/dashboard') }}" class="d-inline-flex">
             <img src="{{ asset('assets/images/logo-icon.svg') }}" alt="" width="24">
@@ -46,4 +46,4 @@
             <a class="nav-link" href="#"><i class="ti ti-user-plus"></i><span class="nav-text">Sign up</span></a>
         </li>
     </ul>
-</aside>
+</aside> --}}

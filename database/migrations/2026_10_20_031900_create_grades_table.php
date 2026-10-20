@@ -22,6 +22,7 @@ return new class extends Migration
             ]);
             $table->decimal('score');
             $table->text('notes')->nullable();
+            $table->unique(['student_id', 'subject_id', 'academic_year_id', 'grade_type'], 'student_grade_unique');
             $table->timestamps();
         });
     }

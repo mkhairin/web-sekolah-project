@@ -19,6 +19,6 @@ class Classes extends Model
 
     public function teachers(): BelongsTo
     {
-        return $this->belongsTo(Classes::class);
+        return $this->belongsTo(Teachers::class);
     }
 }

@@ -23,7 +23,7 @@ return new class extends Migration
                 'Kelompok C (Peminatan)',
                 'Muatan Lokal'
             ]);
-            $table->boolean('is_active')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

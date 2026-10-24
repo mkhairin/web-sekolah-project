@@ -11,8 +11,8 @@ class TeachersSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    // public function run(): void
-    // {
-    //     TeachersModel::factory()->count(50)->create();
-    // }
+    public function run(): void
+    {
+        TeachersModel::factory()->count(50)->create();
+    }
 }

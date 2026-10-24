@@ -24,11 +24,13 @@ class Teachers extends Model
         'join_date'
     ];
 
+    // Mengambil data pengguna yang terkait dengan data guru ini.
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    // Mengambil semua kelas yang diajar oleh guru ini melalui teacher_id.
     public function classes(): HasMany
     {
         return $this->hasMany(Classes::class, 'teacher_id');

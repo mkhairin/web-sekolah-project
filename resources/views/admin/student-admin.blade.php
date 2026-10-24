@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Students-Data')
+@section('title', 'List Data Siswa')
 
 @section('content')
     <div class="row">
@@ -11,7 +11,7 @@
                     <p class="mb-0">Manage your product inventory</p>
                 </div>
                 <div>
-                    <a href="create-product.html" class="btn btn-primary">Add Product</a>
+                    <a href="{{ url('/admin/add-student') }}" class="btn btn-primary">Tambah Data Siswa</a>
                 </div>
             </div>
         </div>
@@ -40,14 +40,15 @@
                     <thead class="table-light border-light">
                         <tr>
                             {{-- <th scope="col">No</th> --}}
+                            <th scope="col">Nama</th>
                             <th scope="col">NISN</th>
                             <th scope="col">NIS</th>
-                            <th scope="col">Nama</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Tempat Lahir</th>
                             <th scope="col">Tgl Lahir</th>
-                            <th scope="col">Agama</th>
+                            <th scope="col">Tahun Masuk</th>
                             <th scope="col">Status</th>
+                            
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -58,9 +59,9 @@
                         @foreach ($students as $student)
                             <tr class="align-middle">
                                 {{-- <td colspan="0">{{ $i++ }}</td> --}}
+                                <td>{{ $student->user->name }}</td>
                                 <td>{{ $student->nisn }}</td>
                                 <td>{{ $student->nis }}</td>
-                                <td>{{ $student->user->name }}</td>
                                 @if ($student->gender == 'L')
                                     <td>Laki-laki</td>
                                 @elseif($student->gender == 'P')
@@ -70,7 +71,7 @@
                                 @endif
                                 <td>{{ $student->place_of_birth }}</td>
                                 <td>{{ $student->date_of_birth }}</td>
-                                <td>{{ $student->religion }}</td>
+                                <td>{{ $student->entry_year }}</td>
                                 <td>{{ $student->user->role }}</td>
                                 <td>
                                     <a href="#"><i class="ti ti-edit"></i></a>

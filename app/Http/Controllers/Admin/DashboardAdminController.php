@@ -15,7 +15,11 @@ class DashboardAdminController extends Controller
 
     public function student_view()
     {
-        $students = StudentsModel::with('user')->paginate(15);
-        return view('admin/students-admin', compact('students'));
+        $students = StudentsModel::with('user')->paginate(10);
+        return view('admin/student-admin', compact('students'));
+    }
+
+    public function student_add_view(){
+        return view('admin/student-add-admin');
     }
 }

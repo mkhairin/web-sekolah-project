@@ -22,7 +22,7 @@ class TeachersFactory extends Factory
             'user_id' => UserModel::where('role', 'teacher')->inRandomOrder()->value('id'),
             'nip' => fake()->unique()->numerify('################'),
             'gender' => fake()->randomElement(['L', 'P']),
-            'place_of_birth' => fake()->city('in'),
+            'place_of_birth' => fake()->city(),
             'date_of_birth' => fake()->date(),
             'phone_number' => fake()->phoneNumber(),
             'address' => fake()->address(),

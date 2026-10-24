@@ -19,7 +19,8 @@ class DashboardAdminController extends Controller
         return view('admin/student-admin', compact('students'));
     }
 
-    public function student_add_view(){
-        return view('admin/student-add-admin');
+    public function student_add_view()
+    {
+        return view('admin/student-create');
     }
 }

@@ -7,8 +7,8 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="">
-                    <h1 class="fs-3 mb-1">Students Data</h1>
-                    <p class="mb-0">Manage your product inventory</p>
+                    <h1 class="fs-3 mb-1">Data Siswa</h1>
+                    <p class="mb-0">Kelola daftar semua, data siswa</p>
                 </div>
                 <div>
                     <a href="{{ url('/admin/add-student') }}" class="btn btn-primary">Tambah Data Siswa</a>
@@ -20,7 +20,7 @@
         <div class="col-12">
             <div>
                 <div class="d-flex gap-2 mb-3 flex-wrap justify-content-between">
-                    <input type="text" class="form-control" placeholder="Search products..." style="max-width: 250px;">
+                    <input type="text" class="form-control" placeholder="Search data siswa..." style="max-width: 250px;">
                     <div class="d-flex gap-2">
 
                         <button class="btn btn-outline-secondary">
@@ -48,7 +48,7 @@
                             <th scope="col">Tgl Lahir</th>
                             <th scope="col">Tahun Masuk</th>
                             <th scope="col">Status</th>
-                            
+
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -72,7 +72,9 @@
                                 <td>{{ $student->place_of_birth }}</td>
                                 <td>{{ $student->date_of_birth }}</td>
                                 <td>{{ $student->entry_year }}</td>
-                                <td>{{ $student->user->role }}</td>
+                                <td> <span
+                                        class="badge bg-success-subtle text-success border border-success">{{ $student->user->role }}
+                                    </span></td>
                                 <td>
                                     <a href="#"><i class="ti ti-edit"></i></a>
                                     <a href="#" class="link-danger"><i class="ti ti-trash ms-2"></i></a>

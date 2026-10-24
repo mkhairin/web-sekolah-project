@@ -17,3 +17,4 @@ Route::get('/add-product', [DashboardController::class, 'addProduct'])->name('pr
 Route::get('/reports', [DashboardController::class, 'reports'])->name('reports.index');
 
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard.index');
+Route::get('/admin/student-list', [DashboardAdminController::class, 'student_view'])->name('admin.student.list');

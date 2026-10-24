@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->foreign('schedule_id')->references('id')->on('schedules');
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreignId('schedule_id')->constrained('schedules');
+            $table->foreignId('student_id')->constrained('students');
             $table->date('date');
             $table->enum('status', [
                 'hadir',

@@ -20,3 +20,5 @@ Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name
 Route::get('/admin/student/list', [DashboardAdminController::class, 'student_view'])->name('admin.student.list');
 Route::get('/admin/student/add', [DashboardAdminController::class, 'student_add_view'])->name('admin.add.student.view');
 Route::post('/admin/student/store', [DashboardAdminController::class, 'student_store'])->name('admin.student.store');
+Route::get('/admin/student/edit/{id}', [DashboardAdminController::class, 'student_edit'])->name('admin.student.edit');
+Route::put('/admin/student/update/{id}', [DashboardAdminController::class, 'student_update'])->name('admin.student.update');

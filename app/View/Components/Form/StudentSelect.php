@@ -12,14 +12,17 @@ class StudentSelect extends Component
 {
     public EloquentCollection $users;
     public string $name;
+    public mixed $value;
 
     /**
      * Create a new component instance.
      */
     public function __construct(
-        string $name
+        string $name,
+        mixed $value = null
     ) {
         $this->name = $name;
+        $this->value = $value;
         $this->users = User::where('role', 'student')->get();
     }
 

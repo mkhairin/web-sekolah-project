@@ -94,7 +94,8 @@
                                 @endif
 
                                 <td>
-                                    <a href="#"><i class="ti ti-edit"></i></a>
+                                    <a href="{{ url('/admin/student/edit/' . $student->id) }}"><i
+                                            class="ti ti-edit"></i></a>
                                     <a href="#" class="link-danger"><i class="ti ti-trash ms-2"></i></a>
                                 </td>
                             </tr>

@@ -1,9 +1,15 @@
 <div>
-    <label for="{{ $name }}" class="form-label">Nama Siswa</label>
-    <select name={{ $name }} class="form-select bg-light" required>
+    <label for="{{ $name }}" class="form-label">
+        Nama Siswa
+    </label>
+
+    <select name="{{ $name }}" id="{{ $name }}" class="form-select bg-light" required>
+        <option value="">Pilih data Siswa</option>
+
         @foreach ($users as $user)
-            <option value="">Pilih data Siswa</option>
-            <option value="{{ $user->id }}">{{ $user->name }}</option>
+            <option value="{{ $user->id }}" @selected((string) old($name, $value) === (string) $user->id)>
+                {{ $user->name }}
+            </option>
         @endforeach
     </select>
 </div>

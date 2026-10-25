@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class Input extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+
     public string $label;
     public string $name;
     public string $type;
@@ -18,6 +16,9 @@ class Input extends Component
     public bool $required;
     public mixed $value;
 
+    /**
+     * Create a new component instance.
+     */
     public function __construct(
         string $name,
         string $label,

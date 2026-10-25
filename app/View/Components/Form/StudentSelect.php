@@ -20,7 +20,7 @@ class StudentSelect extends Component
         string $name
     ) {
         $this->name = $name;
-        $this->users = User::all();
+        $this->users = User::where('role', 'student')->get();
     }
 
     /**

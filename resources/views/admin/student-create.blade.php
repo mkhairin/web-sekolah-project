@@ -10,7 +10,7 @@
                     <p class="mb-0">Kelola data siswa</p>
                 </div>
                 <div>
-                    <a href="{{ url('/admin/student-list') }}" class="btn btn-primary">Kembali ke Daftar Siswa</a>
+                    <a href="{{ url('/admin/student/list') }}" class="btn btn-primary">Kembali</a>
                 </div>
             </div>
         </div>
@@ -20,7 +20,8 @@
             <div class="card">
                 <div class="card-body p-4">
                     <h5 class="fw-bold">Data Siswa</h5>
-                    <form id="addProductForm">
+                    <form id="addProductForm" action="{{ url('/admin/student/store') }}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <x-form.student-select name="student_id" for="student_id" />
@@ -36,8 +37,8 @@
                                     placeholder="Masukkan data NIS" required />
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="productStock" class="form-label">Stock Quantity</label>
-                                <input type="number" class="form-control" id="productStock" placeholder="0" required>
+                                <x-form.select name="gender" label="Jenis Kelamin" type="gender"
+                                    placeholder="Pilih jenis kelamin" required />
                             </div>
                         </div>
                         <div class="row">
@@ -51,10 +52,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            {{-- <div class="col-md-6 mb-3">
-                                <x-form.input name="place_of_birth" type="text" label="Tempat Lahir"
-                                    placeholder="Masukkan data Tempat lahir" required />
-                            </div> --}}
+                            <div class="col-md-6 mb-3">
+                                <x-form.select name="religion" label="Agama" type="religion" placeholder="Pilih Agama"
+                                    required />
+                            </div>
                             <div class="col-md-6 mb-3">
                                 <x-form.input name="address" type="text" for="address" label="Alamat"
                                     placeholder="Masukkan data Alamat" required />

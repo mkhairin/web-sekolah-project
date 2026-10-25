@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Students as StudentModel;
 use Illuminate\Http\RedirectResponse;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardAdminController extends Controller
 {
@@ -138,6 +139,7 @@ class DashboardAdminController extends Controller
         $students = StudentModel::findOrFail($id);
         $students->update($validated);
 
-        return redirect()->to('/admin/student/list')->with('success', 'Data Siswa berhasil diupdate!');
+        Alert::success('Success', 'Data Siswa berhasil diupdate!');
+        return redirect()->to('/admin/student/list');
     }
 }

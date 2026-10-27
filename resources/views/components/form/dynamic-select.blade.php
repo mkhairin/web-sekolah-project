@@ -1,10 +1,10 @@
 <div>
-    <label for="{{ $name }}" class="form-label">
+    <label class="form-label">
         {{ $label }}
     </label>
 
-    <select name="{{ $name }}" id="{{ $name }}" for="{{ $role }}" class="form-select bg-light"
-        required>
+    <select name="{{ $name }}" id="{{ $name }}" for="{{ $role }}"
+        class="form-select bg-light searchable-select" required>
         <option value="">Pilih data {{ $role === 'teacher' ? 'Guru' : 'Siswa' }}</option>
 
         @foreach ($users as $user)

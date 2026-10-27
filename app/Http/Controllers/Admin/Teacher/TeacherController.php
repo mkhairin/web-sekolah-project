@@ -18,4 +18,6 @@ class TeacherController extends Controller
     {
         return view('admin/teacher/teacher-create');
     }
+
+    
 }

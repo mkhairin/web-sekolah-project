@@ -27,3 +27,4 @@ Route::get('/admin/student/edit/{id}', [StudentController::class, 'edit'])->name
 Route::put('/admin/student/update/{id}', [StudentController::class, 'update'])->name('admin.student.update');
 
 Route::get('/admin/teacher/list', [TeacherController::class, 'index'])->name('admin.teacher.index');
+Route::get('/admin/teacher/add', [TeacherController::class, 'create'])->name('admin.teacher.create');

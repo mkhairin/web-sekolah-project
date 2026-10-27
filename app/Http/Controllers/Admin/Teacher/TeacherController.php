@@ -13,4 +13,9 @@ class TeacherController extends Controller
         $teachers = TeacherModel::with('user')->paginate(10);
         return view('admin/teacher/teacher-index', compact('teachers'));
     }
+
+    public function create()
+    {
+        return view('admin/teacher/teacher-create');
+    }
 }

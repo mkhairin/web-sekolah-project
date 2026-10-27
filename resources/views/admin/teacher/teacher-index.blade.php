@@ -11,7 +11,7 @@
                     <p class="mb-0">Kelola daftar semua, data Pengajar</p>
                 </div>
                 <div>
-                    <a href="{{ url('#') }}" class="btn btn-primary">Tambah Data</a>
+                    <a href="{{ url('/admin/teacher/add') }}" class="btn btn-primary">Tambah Data</a>
                 </div>
             </div>
         </div>

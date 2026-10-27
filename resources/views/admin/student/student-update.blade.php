@@ -26,7 +26,7 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <x-form.student-select name="user_id" for="user_id" :value="old('student_id', $students->user_id)" />
+                                <x-form.dynamic-select name="user_id" role="student" :value="old('student_id', $students->user_id)" />
                             </div>
                             <div class="col-md-6 mb-3">
                                 <x-form.input name="nisn" type="text" for="nisn"

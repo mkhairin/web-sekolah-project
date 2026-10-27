@@ -8,22 +8,33 @@ use Illuminate\View\Component;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 
-class StudentSelect extends Component
+class DynamicSelect extends Component
 {
     public EloquentCollection $users;
     public string $name;
     public mixed $value;
+    public string $role;
+    public string $label;
 
     /**
      * Create a new component instance.
      */
     public function __construct(
         string $name,
-        mixed $value = null
+        string $role = 'student',
+        mixed $value = null,
+        ?string $label = null
     ) {
         $this->name = $name;
+        $this->role = $role;
         $this->value = $value;
-        $this->users = User::where('role', 'student')->get();
+
+        $this->label = $label
+            ?? ($role === 'teacher' ? 'Nama Guru' : 'Nama Siswa');
+
+        $this->users = User::where('role', $role)
+            ->orderBy('name')
+            ->get();
     }
 
     /**
@@ -31,6 +42,6 @@ class StudentSelect extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.form.student-select');
+        return view('components.form.dynamic-select');
     }
 }

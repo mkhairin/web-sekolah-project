@@ -24,7 +24,7 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <x-form.student-select name="student_id" for="student_id" />
+                                <x-form.dynamic-select name="student_id" role="student" />
                             </div>
                             <div class="col-md-6 mb-3">
                                 <x-form.input name="nisn" type="text" for="nisn"

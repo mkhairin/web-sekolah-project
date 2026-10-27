@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\DashboardAdminController;
+use App\Http\Controllers\Admin\Student\StudentController;
+use App\Http\Controllers\Admin\Teacher\TeacherController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,8 +19,11 @@ Route::get('/add-product', [DashboardController::class, 'addProduct'])->name('pr
 Route::get('/reports', [DashboardController::class, 'reports'])->name('reports.index');
 
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard.index');
-Route::get('/admin/student/list', [DashboardAdminController::class, 'student_view'])->name('admin.student.list');
-Route::get('/admin/student/add', [DashboardAdminController::class, 'student_add_view'])->name('admin.add.student.view');
-Route::post('/admin/student/store', [DashboardAdminController::class, 'student_store'])->name('admin.student.store');
-Route::get('/admin/student/edit/{id}', [DashboardAdminController::class, 'student_edit'])->name('admin.student.edit');
-Route::put('/admin/student/update/{id}', [DashboardAdminController::class, 'student_update'])->name('admin.student.update');
+
+Route::get('/admin/student/list', [StudentController::class, 'index'])->name('admin.student.index');
+Route::get('/admin/student/add', [StudentController::class, 'create'])->name('admin.student.create');
+Route::post('/admin/student/store', [StudentController::class, 'store'])->name('admin.student.store');
+Route::get('/admin/student/edit/{id}', [StudentController::class, 'edit'])->name('admin.student.edit');
+Route::put('/admin/student/update/{id}', [StudentController::class, 'update'])->name('admin.student.update');
+
+Route::get('/admin/teacher/list', [TeacherController::class, 'index'])->name('admin.teacher.index');

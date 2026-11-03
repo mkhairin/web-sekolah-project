@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AcademicYearController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\DashboardAdminController;
@@ -28,3 +29,5 @@ Route::put('/admin/student/update/{id}', [StudentController::class, 'update'])->
 
 Route::get('/admin/teacher/list', [TeacherController::class, 'index'])->name('admin.teacher.index');
 Route::get('/admin/teacher/add', [TeacherController::class, 'create'])->name('admin.teacher.create');
+
+Route::get('/admin/academic-year/list', [AcademicYearController::class, 'index'])->name('academic.year.index');
